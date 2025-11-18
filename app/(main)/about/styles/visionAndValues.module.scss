@@ -1,0 +1,57 @@
+.section {
+  padding: 100px 0;
+  color: #69696970;
+
+  .cards {
+    grid-template-columns: 50% auto;
+    grid-template-areas:
+      "mission main"
+      "vision main"
+      "values main";
+    column-gap: 50px;
+
+    @media (max-width: 1280px) {
+      grid-template-columns: 50% auto;
+      grid-template-areas:
+        "mission main"
+        "vision main"
+        "values values";
+      column-gap: 50px;
+    }
+
+    @media (max-width: 1080px) {
+      grid-template-columns: 50% auto;
+      grid-template-areas:
+        "mission main"
+        "vision vision"
+        "values values";
+      column-gap: 50px;
+    }
+
+    @media (max-width: 1080px) {
+      grid-template-columns: 50% auto;
+      grid-template-areas:
+        "main main"
+        "vision vision"
+        "values values"
+        "mission mission";
+      column-gap: 50px;
+    }
+
+    .mission {
+      grid-area: mission;
+    }
+
+    .vision {
+      grid-area: vision;
+    }
+
+    .values {
+      grid-area: values;
+    }
+
+    .main {
+      grid-area: main;
+    }
+  }
+}

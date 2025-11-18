@@ -1,0 +1,19 @@
+.project {
+  cursor: pointer;
+  &:hover {
+    .content {
+      opacity: 1;
+      h1 {
+        transform: translateY(0);
+      }
+    }
+  }
+  .content {
+    transition: 0.2s;
+    h1 {
+      transform: translateY(30px);
+      transition: 0.2s ease-out;
+      transition-delay: 0.05s;
+    }
+  }
+}

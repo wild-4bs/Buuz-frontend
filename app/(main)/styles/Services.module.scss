@@ -1,0 +1,19 @@
+.roundedBorder {
+  position: absolute;
+  border-radius: 9999px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #75757583;
+  z-index: 10;
+  transition: 0.2s ease-out;
+}
+
+.serviceContainer {
+  &:hover {
+    border-color: #919191;
+    .roundedBorder {
+      border-color: #dbdbdb;
+    }
+  }
+}

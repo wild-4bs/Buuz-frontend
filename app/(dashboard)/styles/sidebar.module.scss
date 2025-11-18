@@ -1,0 +1,14 @@
+.sidebar {
+  .link {
+    transition: 0.19s ease-out;
+    * {
+      transition: 0.19s ease-out;
+    }
+    &.active {
+      background-color: var(--darkPrimary);
+      border-top-right-radius: 100px;
+      border-bottom-left-radius: 50px;
+      color: white;
+    }
+  }
+}

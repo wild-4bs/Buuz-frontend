@@ -1,0 +1,106 @@
+@import "./tailwind.config.css";
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/Gotham-XLight.otf") format("opentype");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/Gotham-Light.otf") format("opentype");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/Gotham-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham/Gotham-Bold.otf") format("opentype");
+  font-weight: 700; /* Bold */
+  font-display: swap;
+}
+
+:root {
+  --primary: #f3cf47;
+  --darkPrimary: #dab73a;
+  --onPrimary: black;
+  --background: #ffffff;
+  --onBackground: white;
+  --sidebar-width: 200px;
+  --header-height: 60px;
+  --dashboard-bg: #f5f6fa;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
+}
+
+body {
+  font-family: "Gotham", sans-serif;
+  background-color: white;
+  overscroll-behavior: none;
+  will-change: scroll-position;
+}
+
+.dashboardLayout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) auto;
+  grid-template-rows: var(--header-height) auto;
+  grid-template-areas: "sidebar header" "sidebar content";
+  background: #dab73a2c;
+}
+
+.vimeo-crop-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.vimeo-crop-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150%; /* Oversized to fill and crop */
+  height: 150%;
+}
+
+html {
+  will-change: scroll-position;
+  scroll-behavior: smooth;
+}
+
+.whiteIcon {
+  fill: white;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}

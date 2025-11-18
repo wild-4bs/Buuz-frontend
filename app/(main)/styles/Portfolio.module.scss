@@ -1,0 +1,36 @@
+.project {
+  .container {
+    transition: 0.2s;
+  }
+  .layer {
+    width: 0%;
+    height: 0%;
+    transition: 0.2s;
+  }
+  .icon {
+    transition: 0.3s cubic-bezier(0.28, 0.84, 0.42, 1);
+  }
+  .mainPlayButton {
+    transition: 0.3s cubic-bezier(0.28, 0.84, 0.42, 1);
+  }
+  .mainLayer {
+    width: 0%;
+    height: 0%;
+    transition: 0.3s cubic-bezier(0.28, 0.84, 0.42, 1);
+  }
+  &:hover {
+    .mainPlayButton {
+      bottom: 1.2rem;
+      opacity: 1;
+      &:hover {
+        .mainLayer {
+          width: 105%;
+          height: 105%;
+        }
+      }
+    }
+    .icon {
+      transform: translate(10px, -10px);
+    }
+  }
+}
